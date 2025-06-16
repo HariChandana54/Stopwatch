@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flip Clock Style Stopwatch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle" onchange="toggleMode()">
+      <span class="slider round"></span>
+    </label>
+    <span class="toggle-label">🌞 / 🌙</span>
+  </div>
+
+  <div class="container">
+    <h1>Flip Clock Style Stopwatch</h1>
+
+    <div class="clock-display">
+      <div class="flip-card" id="hour">00</div>
+      <div class="colon">:</div>
+      <div class="flip-card" id="minute">00</div>
+      <div class="colon">:</div>
+      <div class="flip-card" id="second">00</div>
+    </div>
+
+    <div class="controls">
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="stopStopwatch()">Stop</button>
+      <button onclick="resetStopwatch()">Reset</button>
+      <button onclick="recordLap()">Lap</button>
+    </div>
+
+    <ul class="laps" id="lapList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
